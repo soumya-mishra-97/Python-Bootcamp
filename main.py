@@ -1,4 +1,12 @@
-print("Hello, World!")
+## Python latest version: 3.14.4
+## This file is created to demonstrate the basic concepts of Python programming language.
+
+print("Hey, Kevin!\nWelcome to Python programming.")
+print("Hello", "Kevin", 5, sep=" , ", end=".\n")
+print("Hello, Python Learner\nI am \"good\" at Python programming.")
+print('''Hey, Kevin!
+Welcome to Python programming.''')
+print("This is a tab in here ->\t<-")
 
 a = 5 #Integer
 print("The value of a is:", a)
@@ -25,51 +33,52 @@ pi = 3.14159 #Float
 str_pi = int(pi) #Convert float to integer
 print("The value of pi is: ", str_pi)
 
-## Reverse String using higher-order function and without higher-order function
-# Higher-order function approach:
-def reverse_string(value: str) -> str:
-    return ''.join(reversed(value))
-print("Reversed string approach1:", reverse_string("Hello, World!"))
+age = int(input("Enter your age: "))
+if age > 18:
+    print("You are eligible to vote.")
+elif age == 18:
+    print("You are eligible to vote, but you need to register first.")
+else:
+    print("You are not eligible to vote.")
 
-# Without higher-order function:
-'''
-How range() works
-For: Hello, World! : there are 13 characters.
+marks = int(input("Enter your marks: "))
+match marks:
+    case m if m>=90 and m<=100:
+        print("You got an A grade.")
+    case m if m>=80 and m<=89:
+        print("You got a B grade.")
+    case m if m>=70 and m<=79:
+        print("You got a C grade.")
+    case m if m>=60 and m<=69:
+        print("You got a D grade.")
+    case _:
+        print("You got an F grade.")
+        
 
-The indexes are:
-H e l l o ,   W o r l d !
-0 1 2 3 4 5 6 7 8 9 10 11 12
+        
+## Approcahes -1
+# num1 = input("Enter a number: ")
+# print("You entered:", num1)
+# num1 = int(num1) #Convert num1 to integer
+# num2 = num1 + 3
+# print("The num2 value is:", num2)
 
-This: range(len(value) - 1, -1, -1)
-becomes: range(12, -1, -1)
-So the indexes are: 12 → 11 → 10 → 9 → ... → 0
-Characters are therefore read as: ! → d → l → r → o → W → , →   → o → l → l → e → H
-Then join() creates: !dlroW ,olleH
-'''
-def reverse_string_manual(value: str) -> str:
-    characters = []
-    for index in range(len(value) -1, -1, -1):
-        characters.append(value[index])
-    return ''.join(characters)
-print("Reversed string approach2:", reverse_string_manual("Hello, World!"))
+## Approcahes -2
+num3 = int(input("Enter a number: "))
+num4 = int(input("Enter another number: "))
+num5 = num3 + num4
+print("The sum of num3 and num4 is:", num5)
 
-## Reverse Word using higher-order function and without higher-order function
-# Higher-order function approach:
-def reverse_word(value: str) -> str:
-    return ' '.join(reversed(value.split()))
-print("Reversed word approach1:", reverse_word("Hello, My name is Kevin!"))
+# print a square and cube of a number
+num6 = int(input("Enter a number: "))
+square = num6 ** 2
+cube = num6 ** 3
+print("The square of", num6, "is:", square)
+print("The cube of", num6, "is:", cube)
 
-#without higher-order function:
-def reverse_word_manual(value: str) -> str:
-    words = value.split()
-    reversedwords = []
-    for index in range(len(words) -1, -1, -1):
-        reversedwords.append(words[index])
-    return ' '.join(reversedwords)
-print("Reversed word approach2:", reverse_word_manual("Hello, My name is Kevin!"))
+# Range function demonstration from i to i-1
+for i in range(1, 6):
+    print("The value of i is:", i)
 
-'''
-print("What does the Visualize button do?")
-Write a code to call LLM model gpt 4o deployed in azure  
-https://abc.openai.com/deployments/gpt4o/chat/completions
-'''
+for i in range( 1, 11):
+    print("5 *", i, "=", 5*i)
