@@ -1,5 +1,15 @@
 ## Python latest version: 3.14.4
 ## This file is created to demonstrate the basic concepts of Python programming language.
+# This is Python code
+name = "Sarah"
+age = 25
+print(f"Hello, my name is {name} and I am {age} years old")
+
+# Making a simple decision
+if age >= 18:
+    print("I can vote!")
+else:
+    print("I'm too young to vote")
 
 print("Hey, Kevin!\nWelcome to Python programming.")
 print("Hello", "Kevin", 5, sep=" , ", end=".\n")
@@ -82,3 +92,4 @@ for i in range(1, 6):
 
 for i in range( 1, 11):
     print("5 *", i, "=", 5*i)
+
