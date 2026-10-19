@@ -24,8 +24,39 @@ if someone else asking to use anaconda environment, you can use virtual envirome
 '''
 
 import requests
+import matplotlib.pyplot as plt
 
 #Download a web page
 url = "https://www.example.com"
 response = requests.get(url)
 print('Status code:', response.status_code)
+
+#Define plot data
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+#Create the line plot
+plt.plot(x, y, 
+         label = 'Line Plot', 
+         color = 'red', 
+         marker = 'o', 
+         linestyle = '--')
+
+# Add title and labels
+plt.title('Sample Line Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Display the chart
+plt.show()
+
+# Define a function to plot a bar chart
+def plot_bar_chart(data, title, xlabel, ylabel):
+    plt.bar(data.keys(), data.values(), color='blue')
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.show()
+    
+bar_data = {'A': 10, 'B': 15, 'C': 7, 'D': 12}
+plot_bar_chart(bar_data, 'Sample Bar Chart', 'Categories', 'Values')

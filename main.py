@@ -123,7 +123,7 @@ result = (2 + 3) * 4    # 20 (parentheses first)
 
 age = 25
 has_license = True
-not has_license # False
+not has_license # type: ignore # False
 # AND - both must be true
 can_drive = age >= 16 and has_license
 print(can_drive)  # True

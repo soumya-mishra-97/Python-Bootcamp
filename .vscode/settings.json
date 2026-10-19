@@ -1,4 +1,5 @@
 {
+    "editor.fontFamily": "Times New Roman",
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     "python.terminal.activateEnvironment": true
 }
