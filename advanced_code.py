@@ -60,3 +60,62 @@ def plot_bar_chart(data, title, xlabel, ylabel):
     
 bar_data = {'A': 10, 'B': 15, 'C': 7, 'D': 12}
 plot_bar_chart(bar_data, 'Sample Bar Chart', 'Categories', 'Values')
+
+
+# Highest_frequency_char
+''' Input: Programming
+Output: g
+g appears twice, which is the highest frequency in this example. Other characters with the same frequency can also exist.
+
+Explanation
+1. Create a dictionary to store each character's frequency.
+2. Loop through the string and increment the count for each character.
+3. Use max(frequency, key=frequency.get) to return the character with the highest count.
+'''
+
+# Find max_freq character
+'''
+arr = ['a', 'd', 'f', 'd', 'a', 'h', 'd']
+find max_freq character
+Output: d
+
+How it works
+1. Create a dictionary to count each character.
+2. Loop through the list and increment each character's count.
+3. Use max(freq, key=freq.get) to find the character with the highest frequency.
+4. Return that character.
+
+For this input, d appears 3 times, which is the highest frequency.
+- Time complexity: \(O(n)\)
+- Space complexity: \(O(k)\), where \(k\) is the number of distinct characters.
+'''
+
+# Replace 'd' with 'h' in string 's= 'abcde'
+'''s= 'abcde'
+s[3] = h ## Type Error
+
+Replace 'd' with 'h' in  string
+- Convert the string into a list
+- using replace()
+- using slicing
+'''
+# Convert the string into a list
+s = 'abcde'
+list_s = list(s) #['a', 'b', 'c', 'd', 'e']
+print(list_s)
+list_s[3] = 'h'
+print(list_s) #['a', 'b', 'c', 'h', 'e']
+s = ''.join(list_s)
+print(s) #abche
+
+# Replace
+s= 'abcde'
+s= s.replace('d', 'h')
+print(s) #abche
+
+# Slicing
+s = "abcde"
+#      01234
+#      -5-4-3-2-1
+s = s[:3] + "h" + s[4:]
+print(s) #abche
