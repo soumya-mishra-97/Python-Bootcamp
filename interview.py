@@ -152,3 +152,19 @@ Explain the differiencitae between them
 - else: handles the success scenarios
 - finally: making it for the cleaup or loging wheater the operation is success or failure
 '''
+
+
+'''
+Write a Python program to find the first character in a string that occurs only once.
+Input - programming
+'''
+def unique_char(s):
+  
+  for c in s:
+    if s.count(c) == 1:
+      return c
+  return None
+
+text = 'programming'
+res = unique_char(text)
+print(res)
